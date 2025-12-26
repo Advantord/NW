@@ -898,8 +898,8 @@ function MakeWindow(Configs)
 		})Make("Corner", TabSelect)
 		
 		local LabelTitle = InsertTheme(Create("TextLabel", TabSelect, {
-			Size = UDim2.new(1, -25 or -15, 1),
-			Position = UDim2.fromOffset(25 or 15),
+			Size = UDim2.new(1, -10, 1, 0),
+			Position = UDim2.new(0, 10, 0, 0,),
 			BackgroundTransparency = 1,
 			Font = Enum.Font.GothamMedium,
 			Text = TName,
@@ -910,13 +910,14 @@ function MakeWindow(Configs)
 			TextTruncate = "AtEnd"
 		}), "Text")
 		
-		local Selected = InsertTheme(Create("Frame", TabSelect, {
+		local Selected = Create("Frame", TabSelect, {
 			Size = FirstTab and UDim2.new(0, 4, 0, 4) or UDim2.new(0, 4, 0, 13),
 			Position = UDim2.new(0, 1, 0.5),
 			AnchorPoint = Vector2.new(0, 0.5),
 			BackgroundColor3 = Theme["Color Theme"],
-			BackgroundTransparency = FirstTab and 1 or 0
-		}), "Theme")Make("Corner", Selected, UDim.new(0.5, 0))
+			BackgroundTransparency = FirstTab and 1 or 0,
+			BorderSizePixel = 0
+		})
 		
 		local Container = InsertTheme(Create("ScrollingFrame", {
 			Size = UDim2.new(1, 0, 1, 0),
