@@ -518,8 +518,7 @@ end
 function MakeWindow(Configs)
 	local WTitle = Configs[1] or Configs.Name or Configs.Title or "NeverWin"
 	local WMiniText = Configs[2] or Configs.SubTitle or "by Empty"
-	
-	Settings.ScriptFile = Configs[3] or Configs.SaveFolder or false
+	local Settings.ScriptFile = Configs[3] or Configs.SaveFolder or false
 	
 	local function LoadFile()
 		local File = Settings.ScriptFile
