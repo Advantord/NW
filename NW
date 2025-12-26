@@ -899,7 +899,7 @@ function MakeWindow(Configs)
 		
 		local LabelTitle = InsertTheme(Create("TextLabel", TabSelect, {
 			Size = UDim2.new(1, -10, 1, 0),
-			Position = UDim2.new(0, 10, 0, 0,),
+			Position = UDim2.new(0, 10, 0, 0),
 			BackgroundTransparency = 1,
 			Font = Enum.Font.GothamMedium,
 			Text = TName,
