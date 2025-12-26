@@ -1,4 +1,4 @@
-vlocal MarketplaceService = game:GetService("MarketplaceService")
+local MarketplaceService = game:GetService("MarketplaceService")
 local UserInputService = game:GetService("UserInputService")
 local TweenService = game:GetService("TweenService")
 local HttpService = game:GetService("HttpService")
@@ -754,7 +754,7 @@ function MakeWindow(Configs)
 		
 		local minimisedsc = false
 		SetProps(Button, Configs.Button)
-		Button.Activated:Connect(MainFrame.Visible = not MainFrame.Visible)
+		Button.MouseButton1Click:Connect(Window.Minimize)
 		
 		
 		return {
