@@ -914,7 +914,7 @@ function MakeWindow(Configs)
 			Size = FirstTab and UDim2.new(0, 4, 0, 4) or UDim2.new(0, 4, 0, 13),
 			Position = UDim2.new(0, 1, 0.5, 0),
 			AnchorPoint = Vector2.new(0, 0.5),
-			BackgroundColor3 = Color3.new(255, 255, 255),
+			BackgroundColor3 = Color3.fromRGB(255, 255, 255),
 			BackgroundTransparency = FirstTab and 1 or 0,
 			BorderSizePixel = 0
 		})
