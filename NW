@@ -518,7 +518,8 @@ end
 function MakeWindow(Configs)
 	local WTitle = Configs[1] or Configs.Name or Configs.Title or "NeverWin"
 	local WMiniText = Configs[2] or Configs.SubTitle or "by Empty"
-	local Settings.ScriptFile = Configs[3] or Configs.SaveFolder or false
+	
+	Settings.ScriptFile = Configs[3] or Configs.SaveFolder or false
 	
 	local function LoadFile()
 		local File = Settings.ScriptFile
@@ -753,15 +754,7 @@ function MakeWindow(Configs)
 		
 		local minimisedsc = false
 		SetProps(Button, Configs.Button)
-		Button.Activated:Connect(function()
-			if minimisedsc then
-				if minimisedsc = false then
-					MainFrame.Visible = true
-				else
-					MainFrame.Visible = false
-				end
-			end
-		end)
+		Button.Activated:Connect(Window.Minimize)
 		
 		
 		return {
@@ -1727,3 +1720,4 @@ function MakeWindow(Configs)
 end
 
 return NeverWin
+
